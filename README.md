@@ -1,3 +1,4 @@
+
 # Flask Cadastro de Dados Pessoais
 
 Projeto educacional em Flask que demonstra:
@@ -23,3 +24,7 @@ Projeto educacional em Flask que demonstra:
 
 
 
+=======
+# flex-cadastro-simples-login
+App de cadastro com flex, uso de login
+>>>>>>> eec8b1b52879f541f6da8e3e87e3c666c47e4001
