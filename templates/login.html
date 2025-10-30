@@ -8,6 +8,27 @@
 <body class="login-body">
     <div class="login-container">
         <h2>Login do Sistema</h2>
+        <!--
+          No Flask, existe uma função chamada flash, que envia mensagens de forma temporária,
+          mensagens que aparecem após um direcionamento, do tipo "Login realizado com sucesso" ou  "Usuário ou senha incorretos". 
+        no flash você pode receber dois parametros: a mensagem e a categoria da mensagem (sucesso e erro).
+        no template é usado get_flashed_messages para capturar essas mensagens e exibi-las.
+        
+        O parametro with_categories=true retorna uma lista de tuplas (categoria, mensagem).
+
+        bloco with: cria uma variável temporária (messages) que armazena as mensagens flash.
+        quando o bloco endwith é alcançado, a variável messages deixa de existir.
+        messages: É uma lista de tuplas (categoria, mensagem) retornada por get_flashed_messages.
+        Assim a cada volta do for do pega um par:
+        (categoria, mensagem)
+
+        A linha: <p class="{{ categoria }}">{{ mensagem }}</p>' cria um parágrafo com a classe CSS definida pela categoria da mensagem.' como por exemplo:
+        
+        <p class="sucesso">Login realizado com sucesso!</p>
+        <p class="erro">Usuário ou senha inválidos!</p>
+
+        -->
+
 
         {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
